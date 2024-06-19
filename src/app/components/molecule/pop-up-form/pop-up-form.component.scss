@@ -12,5 +12,15 @@
                 padding:10px;
             }
         }
+        &--amount-container{
+            display: flex;
+        }
+        &--discribtion-container{
+            display: flex;
+        }
+    }
+    &__save-container{
+        text-align: center;
+        padding: 5px 11px;
     }
 }

@@ -1,35 +1,31 @@
-<!-- <div class="pft-pop-up-form-container">
-    <div class="pft-pop-up-form-container__close-container" (click)="onClose()" >close</div>
-    <div class="pft-pop-up-form-container__body">
-        <div class="pft-pop-up-form-container__body--expense-type-container">
-        
-            <pft-button title="Income" (buttonClicked)="onClickHandler("Income")" [btnType]="isIncome ? 'btn-primary' : 'btn-outline-primary'" />
-        
-            <pft-button title="Expense" (buttonClicked)="onClickHandler("Expense")" [btnType]="!isIncome ? 'btn-primary' : 'btn-outline-primary'" />
-        
-        </div>
-    </div>
-</div> -->
-
 <div class="pft-pop-up-form-container">
-    <div class="pft-pop-up-form-container__close-container" (click)="onClose()">close</div>
-    <div class="pft-pop-up-form-container__body">
-      <div class="pft-pop-up-form-container__body--expense-type-container">
-        <span> Type :
+  <div class="pft-pop-up-form-container__close-container" (click)="onClose()">
+    close
+  </div>
+  <div class="pft-pop-up-form-container__body">
+    <div class="pft-pop-up-form-container__body--expense-type-container">
+        Type :
         <pft-button
-            class="income-btn"
+          class="income-btn"
           title="Income"
           (buttonClicked)="onClickHandler('Income')"
           [btnType]="isIncome ? 'btn-primary' : 'btn-outline-primary'"
         ></pft-button>
         <pft-button
-        class="expense-btn"
+          class="expense-btn"
           title="Expense"
           (buttonClicked)="onClickHandler('Expense')"
           [btnType]="!isIncome ? 'btn-primary' : 'btn-outline-primary'"
         ></pft-button>
-    </span>
-      </div>
+    </div>
+    <div class="pft-pop-up-form-container__body--amount-container">
+      Amount: <pft-input class="amount-input-contianer" [value]="amount" (valueChange)="amount = $event" placeholder="Enter amount"></pft-input>
+    </div>
+    <div class="pft-pop-up-form-container__body--discribtion-container">
+      Description: <pft-input class="description-input-contianer" [value]="description" (valueChange)="description = $event" placeholder="Enter description"></pft-input>
     </div>
   </div>
-  
+  <div class="pft-pop-up-form-container__save-container" (click)="onSave()">
+    <pft-button title="Save"></pft-button>
+  </div>
+</div>
