@@ -2,9 +2,19 @@
 # pfin-tracker-v01-
 Personal finance tracker that allows users to manage their income and expenses.
 =======
-# FinanceTracker
+# To start
+Step 1: clone the repo in local 
+`git clone https://github.com/R1Sh0315/pfin-tracker-v01`
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+Step 2: istall all dependency
+`npm i`
+
+Step 3: run in local
+`ng s`
+
+## Snap shot
+![Screenshot from 2024-06-19 18-58-55](https://github.com/R1Sh0315/pfin-tracker-v01/assets/52277260/4e585294-fc43-433c-b858-60e9cacb2c5a)
+
 
 ## Development server
 
