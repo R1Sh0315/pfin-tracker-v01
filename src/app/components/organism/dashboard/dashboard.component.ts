@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
-
+import {AtomsModule} from '../../atom/atom.module'
 @Component({
-  selector: 'app-dashboard',
+  selector: 'pft-dashboard',
   standalone: true,
-  imports: [],
+  imports: [AtomsModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent {
 
+  onClickHandler():void{
+    console.log('hello')
+  }
 }
