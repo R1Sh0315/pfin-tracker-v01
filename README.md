@@ -14,6 +14,7 @@ Step 3: run in local
 
 ## Snap shot
 ![Screenshot from 2024-06-19 18-58-55](https://github.com/R1Sh0315/pfin-tracker-v01/assets/52277260/4e585294-fc43-433c-b858-60e9cacb2c5a)
+![Screenshot from 2024-06-19 18-58-19](https://github.com/R1Sh0315/pfin-tracker-v01/assets/52277260/2dcd929d-7a47-401f-85f5-30a6dc136f47)
 
 
 ## Development server
