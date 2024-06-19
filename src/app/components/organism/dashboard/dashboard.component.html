@@ -1,2 +1,7 @@
-<pft-input />
-<pft-button title="Add +" (buttonClicked)="onClickHandler()"/>
+<div *ngIf="!isPopUp" class="pft-dashboard-container">
+    <pft-button title="Add" (buttonClicked)="onClickHandler()"/>
+
+</div>
+<div class="" *ngIf="isPopUp">
+    <pft-pop-up-form (closeClicked)="onCloseHandler()" />
+</div>

@@ -1,0 +1,16 @@
+.pft-pop-up-form-container{
+    border: 1px solid black;
+    &__close-container{
+        text-align: end;
+        padding: 5px 11px;
+    }
+    &__body{
+    border: 1px solid black;
+    margin: auto 25%;
+        &--expense-type-container{
+            .expense-btn,.income-btn{
+                padding:10px;
+            }
+        }
+    }
+}

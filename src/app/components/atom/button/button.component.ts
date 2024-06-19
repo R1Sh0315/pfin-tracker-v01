@@ -10,6 +10,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class ButtonComponent {
   @Output() buttonClicked = new EventEmitter<void>();
   @Input() title: string=''
+  @Input() btnType: string = 'btn-outline-primary'
 
   onClick() {
     this.buttonClicked.emit();
