@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 export class InputComponent {
   @Input() value: string = '';
   @Input() placeholder: string = '';
+  @Input() type?: string ='text'
   @Output() valueChange = new EventEmitter<string>();
 
   onInput(event: any) {

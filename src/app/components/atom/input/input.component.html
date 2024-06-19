@@ -1,13 +1,14 @@
 <div class="pft-input-contianer">
   <div class="input-group flex-nowrap">
     <input
-      type="text"
+      [type]="type"
       class="form-control"
       [placeholder]="placeholder"
       [value]="value"
       (input)="onInput($event)"
       aria-label="Username"
       aria-describedby="addon-wrapping"
+
     />
   </div>
 </div>

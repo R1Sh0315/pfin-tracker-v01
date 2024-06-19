@@ -2,7 +2,7 @@
   <div class="add-btn">
     <pft-button title="Add" (buttonClicked)="onAddClick()" [isFull]="true" />
   </div>
-  <div>
+  <div class="tabel-container">
     <table class="table">
       <thead>
         <tr>
@@ -21,7 +21,7 @@
           <td class="{{ item.amount > 0 ? 'profit' : 'loss' }}">
             {{ item.amount }}
           </td>
-          <td>
+          <td class="action-container">
             <pft-button
               class="edit-btn"
               title="Edit"

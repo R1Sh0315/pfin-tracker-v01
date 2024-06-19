@@ -4,7 +4,8 @@
   </div>
   <div class="pft-pop-up-form-container__body">
     <div class="pft-pop-up-form-container__body--expense-type-container">
-        Type :
+      <span>Type :</span>
+      <div class="btn-container">
         <pft-button
           class="income-btn"
           title="Income"
@@ -17,12 +18,26 @@
           (buttonClicked)="onClickHandler('Expense')"
           [btnType]="!isIncome ? 'btn-primary' : 'btn-outline-primary'"
         ></pft-button>
+      </div>
     </div>
     <div class="pft-pop-up-form-container__body--amount-container">
-      Amount: <pft-input class="amount-input-contianer" [value]="amount" (valueChange)="amount = $event" placeholder="Enter amount"></pft-input>
+      <span>Amount :</span
+      ><pft-input
+        class="amount-input-contianer"
+        [value]="amount"
+        (valueChange)="amount = $event"
+        placeholder="Enter amount"
+        type="number"
+      ></pft-input>
     </div>
     <div class="pft-pop-up-form-container__body--discribtion-container">
-      Description: <pft-input class="description-input-contianer" [value]="description" (valueChange)="description = $event" placeholder="Enter description"></pft-input>
+      <span>Description :</span>
+      <pft-input
+        class="description-input-contianer"
+        [value]="description"
+        (valueChange)="description = $event"
+        placeholder="Enter description"
+      ></pft-input>
     </div>
   </div>
   <div class="pft-pop-up-form-container__save-container" (click)="onSave()">

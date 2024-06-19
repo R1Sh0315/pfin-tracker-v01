@@ -1,26 +1,94 @@
-.pft-pop-up-edit-form-container{
-    border: 1px solid black;
-    &__close-container{
-        text-align: end;
-        padding: 5px 11px;
-    }
-    &__body{
-    border: 1px solid black;
+.pft-pop-up-edit-form-container {
+  box-shadow: 10px 10px 20px #babecc, -10px -10px 20px #ffff;
+  &__close-container {
+    text-align: end;
+    padding: 5px 11px;
+  }
+  &__body {
     margin: auto 25%;
-        &--expense-type-container{
-            .expense-btn,.income-btn{
-                padding:10px;
-            }
-        }
-        &--amount-container{
-            display: flex;
-        }
-        &--discribtion-container{
-            display: flex;
-        }
+    &--expense-type-container {
+        display: flex;
+        flex-direction: row;
+      span {
+        padding: 15px;
+        width: 150px !important;
+      }
+      .expense-btn,
+      .income-btn {
+        padding: 10px;
+      }
     }
-    &__save-container{
-        text-align: center;
-        padding: 5px 11px;
+    &--amount-container,
+    &--discribtion-container {
+      span {
+        padding: 15px;
+        width: 150px !important;
+      }
     }
+    &--amount-container {
+      .amount-input-contianer {
+        position: relative;
+        align-items: center;
+        display: flex;
+      }
+      display: flex;
+    }
+    &--discribtion-container {
+      .description-input-contianer {
+        position: relative;
+        align-items: center;
+        display: flex;
+      }
+      display: flex;
+    }
+  }
+  &__save-container {
+    text-align: center;
+    padding: 5px 11px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .pft-pop-up-edit-form-container {
+    width: 100%;
+    &__body {
+      &--expense-type-container {
+        span {
+          padding: 15px;
+          width: 150px !important;
+        }
+        .btn-container {
+          display: flex;
+          flex-wrap: nowrap;
+        }
+        .expense-btn,
+        .income-btn {
+          padding: 10px;
+        }
+        display: flex;
+        flex-direction: column;
+      }
+      &--amount-container {
+        .amount-input-contianer {
+          position: relative;
+          align-items: center;
+          display: flex;
+        }
+        display: flex;
+        flex-direction: column;
+      }
+      &--discribtion-container {
+        .description-input-contianer {
+          position: relative;
+          align-items: center;
+          display: flex;
+        }
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    &__save-container {
+      padding: 26px;
+    }
+  }
 }
