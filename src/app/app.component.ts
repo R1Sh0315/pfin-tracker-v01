@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {  TestComponent } from './components/test/test.component'
+import  {MoleculesModule} from './components/molecule/molecule.module'
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TestComponent],
+  imports: [RouterOutlet, TestComponent, MoleculesModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
