@@ -11,6 +11,8 @@ export class ButtonComponent {
   @Output() buttonClicked = new EventEmitter<void>();
   @Input() title: string=''
   @Input() btnType: string = 'btn-outline-primary'
+  @Input() isFull?: boolean=false
+
 
   onClick() {
     this.buttonClicked.emit();

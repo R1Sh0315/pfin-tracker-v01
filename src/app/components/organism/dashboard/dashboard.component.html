@@ -1,7 +1,57 @@
 <div *ngIf="!isPopUp" class="pft-dashboard-container">
-    <pft-button title="Add" (buttonClicked)="onClickHandler()"/>
-
+  <div class="add-btn">
+    <pft-button title="Add" (buttonClicked)="onAddClick()" [isFull]="true" />
+  </div>
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Description</th>
+          <th scope="col">Type</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ item.description }}</td>
+          <td>{{ item.type }}</td>
+          <td class="{{ item.amount > 0 ? 'profit' : 'loss' }}">
+            {{ item.amount }}
+          </td>
+          <td>
+            <pft-button
+              class="edit-btn"
+              title="Edit"
+              (buttonClicked)="onEditHandler(item.id)"
+              [btnType]="'btn-outline-info'"
+            ></pft-button>
+            <pft-button
+              class="del-btn"
+              title="Delete"
+              (buttonClicked)="onDeleteHandler(item.id)"
+              [btnType]="'btn-outline-danger'"
+            ></pft-button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 <div class="" *ngIf="isPopUp">
-    <pft-pop-up-form (closeClicked)="onCloseHandler()" />
+  <pft-pop-up-form
+    *ngIf="!isEdit"
+    (closeClicked)="onCloseHandler()"
+  ></pft-pop-up-form>
+  <pft-pop-up-edit-form
+    *ngIf="isEdit"
+    [item]="editItem"
+    (closeClicked)="onCloseHandler()"
+    (saveClicked)="onSaveHandler()"
+  ></pft-pop-up-edit-form>
+</div>
+<div class="pft-total-container">
+  Total : <span class="{{ total >= 0 ? 'profit' : 'loss' }}">{{ total }}</span>
 </div>

@@ -1,0 +1,36 @@
+.pft-dashboard-container {
+  .add-btn {
+    text-align: center;
+    padding: 15px 10px 30px 10px;
+  }
+  .table {
+    .edit-btn {
+      padding: 1px 5px;
+    }
+    .del-btn {
+      padding: 1px 5px;
+    }
+    td,
+    th {
+      vertical-align: baseline;
+    }
+  }
+}
+.pft-total-container {
+  position: fixed;
+  bottom: 0;
+  height: 155px;
+//   border: 1px solid black;
+  width: calc(100% - 32px);
+  padding: 33px 44px;
+  font-weight: 700;
+  font-size: 15pt;
+  border-radius: 12px 12px 0 0;
+  box-shadow: -10px -10px 20px #babecc, 10px 10px 20px #ffff;
+}
+.profit {
+  color: green;
+}
+.loss {
+  color: red;
+}
